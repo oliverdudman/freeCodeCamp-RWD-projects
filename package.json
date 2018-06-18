@@ -1,0 +1,16 @@
+{
+  "name": "rwd_certification",
+  "version": "1.0.0",
+  "description": "freeCodeCamp responsive web design projects ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Dudman",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^3.0.0"
+  }
+}
