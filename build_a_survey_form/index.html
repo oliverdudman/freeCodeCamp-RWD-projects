@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="about">
+        <h1 id="title">How active are you?</h1>
+        <p id="description">
+          Fill in the form to see how active you are.<br>
+          (NB: this is just an example, nothing will happen on submitting this form!)
+        </p>
+      </div>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" class="form-group__label" for="name">Name:</label>
+          <input id="name" class="form-group__input" type="text" placeholder="Name" required />
+        </div>
+        <div class="form-group">
+          <label id="email-label" class="form-group__label" for="email">Email:</label>
+          <input id="email" class="form-group__input" type="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <label id="number-label" class="form-group__label" for="number">Hours spent exercising:</label>
+          <input id="number" class="form-group__input" type="number" min="0" max="168" placeholder="Hours spent exercising" />
+        </div>
+        <div class="form-group">
+          <label class="form-group__label" for="dropdown">What activity do you do most:</label>
+          <select id="dropdown" class="form-group__input form-group__input--dropdown">
+            <option>Walking</option>
+            <option>Running</option>
+            <option>Cycling</option>
+            <option>Swimming</option>
+            <option>Martial Arts</option>
+            <option>Yoga</option>
+            <option>Weight Training</option>
+            <option>Fitness Classes</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group" aria-labelledby="radio-label">
+          <p id="radio-label" class="form-group__label">Age:</p>
+          <div class="form-group__input form-group__input--multi">
+            <label class="form-group__input__check"><input name="age" type="radio" value="17-"/>Under 18</label>
+            <label class="form-group__input__check"><input name="age" type="radio" value="18-24"/>18-24</label>
+            <label class="form-group__input__check"><input name="age" type="radio" value="25-34"/>25-34</label>
+            <label class="form-group__input__check"><input name="age" type="radio" value="18-24"/>35-44</label>
+            <label class="form-group__input__check"><input name="age" type="radio" value="18-24"/>45-54</label>
+            <label class="form-group__input__check"><input name="age" type="radio" value="18-24"/>55-64</label>
+            <label class="form-group__input__check"><input name="age" type="radio" value="65+"/>65+</label>
+          </div>
+        </div>
+        <div class="form-group" aria-labelledby="checkbox-label">
+          <p id="checkbox-label" class="form-group__label">
+            What activities do you do each week <span class="no-break">(Tick all that apply):</span>
+          </p>
+          <div class="form-group__input form-group__input--multi">
+            <label class="form-group__input__check"><input type="checkbox" value="Walking" name="activity1"/>Walking</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Running" name="activity2"/>Running</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Cycling" name="activity3"/>Cycling</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Swimming" name="activity4"/>Swimming</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Martial Arts" name="activity5"/>Martial Arts</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Yoga" name="activity6"/>Yoga<label>
+            <label class="form-group__input__check"><input type="checkbox" value="Weight Training" name="activity7"/>Weight Training</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Fitness Classes" name="activity8"/>Fitness Classes</label>
+            <label class="form-group__input__check"><input type="checkbox" value="Other" name="activity9"/>Other</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-group__label" for="textarea">Comments:</label>
+          <textarea class="form-group__input form-group__input--comment" placeholder="Additional comments"></textarea>
+        </div>
+        <button id="submit" role="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
