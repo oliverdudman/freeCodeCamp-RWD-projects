@@ -148,7 +148,7 @@ a {
   background-color: rgba(0,0,0,0.2);
 }
 
-@media screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) {
   #tribute-info {
     max-width: 100%;
   }
@@ -170,7 +170,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   #tribute-info {
     max-width: 80%;
   }
