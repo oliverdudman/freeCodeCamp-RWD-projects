@@ -2,11 +2,13 @@
 
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <link rel="stylesheet" href="/css/main.css" />
   <body>
     <header id="header">
-      <img id="header-img" src="images/muffin-icon.svg" alt="Muffin icon" />
+      <a href="#"><img id="header-img" src="images/muffin-icon.svg" alt="Muffin icon" /></a>
+      <p id="nav__text">The Really Nice Cupcake Co.</p>
       <nav id="nav-bar">
         <a class="nav-link" href="#about-us">About us</a>
         <a class="nav-link" href="#gallery">Gallery</a>
@@ -14,48 +16,94 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="heading">The really nice Cupcake Company</h1>
+      <h1 class="heading">The really nice Cupcake Co.</h1>
       <div id="about-us">
         <h2 class="heading">About us</h2>
         <h3 class="heading">History</h3>
-        <p>We opened our first bakery in 1964 in a small town nestled in the English Countryside.
-          We now supply custom cakes to Weddings, Parties and any other event you can think of.
+        <p class="info">We opened our first bakery in 1964 in a small town nestled in the English Countryside.
+          We now supply custom cakes for weddings, parties and any other event you can think of.
         </p>
         <h3 class="heading">Bespoke</h3>
-        <p>
+        <p class="info">
           All of our cakes are bespoke and are handmade to your specifications.
-          We can cater to all sizes of event and are expert in create unique designs
+          We can cater to all sizes of event and are experts in create unique designs
           that will make all your guests smile.
         </p>
         <h3 class="heading">Quality ingredients</h3>
-        <p>
-          We use only the finest ingredients. Where possible, we try to get out ingredients locally
-          and as our cakes our fresly made, they contain no unnecessary preservatives.
+        <p class="info">
+          We use only the finest ingredients and where possible, we try to get our ingredients locally.
+          As our cakes our fresly made, they contain no unnecessary preservatives.
         </p>
         <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0y5dc3xfWQ0" frameborder="0"></iframe>
       </div>
       <div id="gallery">
-        <h2 class="heading">Gallery</h2>
-        <img class="gallery-img" src="images/cupcakes1.jpg" alt="cupcake image" />
-        <img class="gallery-img" src="images/cupcakes2.jpg" alt="cupcake image" />
-        <img class="gallery-img" src="images/cupcakes3.jpg" alt="cupcake image" />
-        <img class="gallery-img" src="images/cupcakes4.jpg" alt="cupcake image" />
-        <img class="gallery-img" src="images/cupcakes5.jpg" alt="cupcake image" />
-        <img class="gallery-img" src="images/cupcakes6.jpg" alt="cupcake image" />
+        <div class="contain-width">
+          <h2 class="heading">Gallery</h2>
+          <img class="gallery-img" src="images/cupcakes1.jpg" alt="cupcake image" />
+          <img class="gallery-img" src="images/cupcakes2.jpg" alt="cupcake image" />
+          <img class="gallery-img" src="images/cupcakes3.jpg" alt="cupcake image" />
+          <img class="gallery-img" src="images/cupcakes4.jpg" alt="cupcake image" />
+          <img class="gallery-img" src="images/cupcakes5.jpg" alt="cupcake image" />
+          <img class="gallery-img" src="images/cupcakes6.jpg" alt="cupcake image" />
+        </div>
       </div>
       <div id="pricing">
-        <h2 class="heading">Pricing</h2>
-        <div class="product-card">
-        </div>
-        <div class="product-card">
-        </div>
-        <div class="product-card">
+        <div class="contain-width">
+          <h2 class="heading">Pricing</h2>
+          <div class="product-card">
+            <h3 class="product-card__heading">Small</h3>
+            <ul>
+              <li>Parties of up to 10 people</li>
+              <li>1 medium celebration cake</li>
+              <li>20 standard cupcakes</li>
+              <li>30 miniature cupcakes</li>
+            </ul>
+            <button class="product-card__btn">Enquire</button>
+          </div>
+          <div class="product-card">
+            <h3 class="product-card__heading">Medium</h3>
+            <ul>
+              <li>Parties of up to 40 people</li>
+              <li>1 extra large celebration cake</li>
+              <li>80 standard cupcakes</li>
+              <li>120 miniature cupcakes</li>
+            </ul>
+            <button class="product-card__btn">Enquire</button>
+          </div>
+          <div class="product-card">
+            <h3 class="product-card__heading">Large</h3>
+            <ul>
+              <li>Parties of up to 100 people</li>
+              <li>3 large celebration cakes</li>
+              <li>200 standard cupcakes</li>
+              <li>400 miniature cupcakes</li>
+            </ul>
+            <button class="product-card__btn">Enquire</button>
+          </div>
+          <div class="product-card">
+            <h3 class="product-card__heading">Custom</h3>
+            <ul>
+              <li>Any number of people</li>
+              <li>Your choice of large cakes</li>
+              <li>Your choice of cupcakes</li>
+              <li>Bespoke to requirements</li>
+            </ul>
+            <button class="product-card__btn">Enquire</button>
+          </div>
         </div>
       </div>
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input id="email" name="email" type="email" placeholder="Enter email" required/>
-        <input id="submit" type="submit" value="Subscribe" />
-      </form>
     </main>
+    <footer id="footer">
+      <nav class="navbar">
+        <a class="nav-link" href="#">Privacy</a>
+        <a class="nav-link" href="#">Terms</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+      <span id="copyright">Copyright &copy 2018 The Really Nice Cupcake Co.</span>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input id="email" name="email" type="email" placeholder="Your email address" required/>
+        <input id="submit" type="submit" value="Subscribe to newsletter" />
+      </form>
+    </footer>
   </body>
 </head>
