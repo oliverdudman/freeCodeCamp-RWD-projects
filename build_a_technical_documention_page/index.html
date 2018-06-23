@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src="/js/main.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css" />
+  <body>
+    <nav id="navbar">
+      <header><h1>A beginners guide to CSS Flexbox<h1></header>
+      <a id="navbar-toggler"><i class="fas fa-bars"></i></a>
+      <a href="#Introduction" class="nav-link">Introduction</a>
+      <a href="#Getting_started" class="nav-link">Getting started</a>
+      <a href="#Flexbox_axis" class="nav-link">Flexbox axis</a>
+      <a href="#Aligning_content" class="nav-link">Aligning content</a>
+      <a href="#Wrapping_content" class="nav-link">Wrapping content</a>
+      <a href="#Further_reading" class="nav-link">Further reading</a>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header><h2>Introduction</h2></header>
+        <p>Flexible box is a layout model introduced in CSS3 for the design of flexible responsive layouts.
+           Flexboxes can be either a row or column and each flex container can only have one row or colum at any given time.
+           Flexboxes have the follwing properties:
+         </p>
+          <ul>
+            <li>align-content</li>
+            <li>align-items</li>
+            <li>align-self</li>
+            <li>flex</li>
+            <li>flex-basis</li>
+            <li>flex-direction</li>
+            <li>flex-flow</li>
+            <li>flex-grow</li>
+            <li>flex-shrink</li>
+            <li>flex-wrap</li>
+            <li>justify-content</li>
+            <li>order</li>
+          </ul>
+        </section>
+      <section id="Getting_started" class="main-section">
+        <header><h2>Getting started</h2></header>
+        <p>
+          In order to start using flexboxes, first set the display on the parent container to flex and set the
+          flex-direction to either row or column (row is default):
+        </p>
+        <pre class="code-block"><code>
+          .parent {
+            display: flex;
+            flex-direction: row;
+          }
+        </code></pre>
+        <p>
+          To center an element vertically and horizontally, set both the justify-content and align-items properties to center.
+          In order to take effect, the width and height also need to be set.
+        </p>
+        <pre class="code-block"><code>
+          .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            width: 300px;
+            height: 300px;
+          }
+        </code></pre>
+        <div class="example-container">
+          <div id="example1">
+            <p>A centered element</p>
+          </div>
+        </div>
+      </section>
+      <section id="Flexbox_axis" class="main-section">
+        <header><h2>Flexbox axis<h2></header>
+        <p>A flexbox has two axis: the main axis and the cross axis. The flex-direction property sets the main axis and the
+          cross axis is perpendicular to the main axis.
+        </p>
+        <figure class="example-container">
+          <figcaption>&larr; Main axis &rarr;<br><code>(flex-direction: row)</code></figcaption>
+          <div id="example2-a" class="example-box-container">
+            <div class="example-box"></div>
+            <div class="example-box"></div>
+            <div class="example-box"></div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption>&uarr; Main axis &darr;<br><code>(flex-direction: column)</code></figcaption>
+          <div id="example2-b" class="example-box-container">
+            <div class="example-box"></div>
+            <div class="example-box"></div>
+            <div class="example-box"></div>
+          </div>
+        </figure>
+      </section>
+      <section id="Aligning_content" class="main-section">
+        <header><h2>Aligning content</h2></header>
+        <p>
+          The content of a flexbox can be aligned using the justify-content and align-items properties.
+          The justify-content property aligns the content along the main axis and can have the following values:
+        </p>
+          <ul>
+            <li>center</li>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>space-between</li>
+            <li>space-around</li>
+            <li>space-evenly</li>
+          </ul>
+          <pre class="code-block"><code>
+            &ltstyle&gt
+              .parent {
+                display: flex;
+                justify-content: ;// alignment option
+                flex-direction: row;
+
+                width: 100%;
+                height: 100%;
+              }
+            &lt/style&gt
+
+            &ltbody&gt
+              &ltdiv class="parent"&gt
+                &ltdiv class="box"&gt&lt/div&gt
+                &ltdiv class="box"&gt&lt/div&gt
+                &ltdiv class="box"&gt&lt/div&gt
+              &lt/div&gt
+            &lt/body&gt
+          </code></pre>
+          <figure class="example-container">
+            <figcaption><code>justify-content: center</code></figcaption>
+            <div id="example3-a" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>justify-content: flex-start</code></figcaption>
+            <div id="example3-b" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>justify-content: flex-end</code></figcaption>
+            <div id="example3-c" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>justify-content: space-between</code></figcaption>
+            <div id="example3-d" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>justify-content: space-around</code></figcaption>
+            <div id="example3-e" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>justify-content: space-evenly</code></figcaption>
+            <div id="example3-f" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <p>The align-items property aligns the content on the cross axis. When the flex direction is
+            set to row, the align-items property will align the content on the vertical axis.
+          </p>
+          <pre class="code-block"><code>
+            &ltstyle&gt
+              .parent {
+                display: flex;
+                align-items: ;// alignment option
+                flex-direction: row;
+
+                width: 100%;
+                height: 100%;
+              }
+            &lt/style&gt
+
+            &ltbody&gt
+              &ltdiv class="parent"&gt
+                &ltdiv class="box"&gt&lt/div&gt
+                &ltdiv class="box"&gt&lt/div&gt
+                &ltdiv class="box"&gt&lt/div&gt
+              &lt/div&gt
+            &lt/body&gt
+          </code></pre>
+          <figure class="example-container">
+            <figcaption><code>align-items: center</code></figcaption>
+            <div id="example3-g" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>align-items: flex-start</code></figcaption>
+            <div id="example3-h" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+          <figure class="example-container">
+            <figcaption><code>align-items: flex-end</code></figcaption>
+            <div id="example3-i" class="example-box-container">
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+              <div class="example-box"></div>
+            </div>
+          </figure>
+        </section>
+      <section id="Wrapping_content" class="main-section">
+        <header><h2>Wrapping content</h2></header>
+        <p>A flexbox only has one row or column, but by using the flex-wrap property,
+          a row will span multiple lines if the width of the content exceeds the width of the flexbox.
+          Flex-wrap can have the following values:
+        </p>
+        <ul>
+          <li>no-wrap (default)</li>
+          <li>wrap</li>
+          <li>wrap-reverse</li>
+        </ul>
+        <pre class="code-block"><code>
+          &ltstyle&gt
+            .parent {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: ;// wrap option
+
+              width: 100%;
+              height: 100%;
+            }
+          &lt/style&gt
+
+          &ltbody&gt
+            &ltdiv class="parent"&gt
+              &ltdiv class="box"&gtA&lt/div&gt
+              &ltdiv class="box"&gtB&lt/div&gt
+              &ltdiv class="box"&gtC&lt/div&gt
+              &ltdiv class="box"&gtD&lt/div&gt
+              &ltdiv class="box"&gtE&lt/div&gt
+              &ltdiv class="box"&gtF&lt/div&gt
+              &ltdiv class="box"&gtG&lt/div&gt
+            &lt/div&gt
+          &lt/body&gt
+        </code></pre>
+        <figure class="example-container">
+          <figcaption><code>flex-wrap: nowrap</code></figcaption>
+          <div id="example4-a" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>flex-wrap: wrap</code></figcaption>
+          <div id="example4-b" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>flex-wrap: wrap-reverse</code></figcaption>
+          <div id="example4-c" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <p>
+          When content is wrapped, the align-content property can be used to align content on the cross axis.
+          Align-content takes the same values as justify-content and, for a flexbox with a flex-direction of row, will
+          work on the vertical axis.
+        </p>
+        <pre class="code-block"><code>
+          &ltstyle&gt
+            .parent {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              align-content: ;// alignment option
+
+              width: 100%;
+              height: 100%;
+            }
+          &lt/style&gt
+
+          &ltbody&gt
+            &ltdiv class="parent"&gt
+              &ltdiv class="box"&gtA&lt/div&gt
+              &ltdiv class="box"&gtB&lt/div&gt
+              &ltdiv class="box"&gtC&lt/div&gt
+              &ltdiv class="box"&gtD&lt/div&gt
+              &ltdiv class="box"&gtE&lt/div&gt
+              &ltdiv class="box"&gtF&lt/div&gt
+              &ltdiv class="box"&gtG&lt/div&gt
+            &lt/div&gt
+          &lt/body&gt
+        </code></pre>
+        <figure class="example-container">
+          <figcaption><code>align-content: center</code></figcaption>
+          <div id="example4-d" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>align-content: flex-start</code></figcaption>
+          <div id="example4-e" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>align-content: flex-end</code></figcaption>
+          <div id="example4-f" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>align-content: space-between</code></figcaption>
+          <div id="example4-g" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>align-content: space-around</code></figcaption>
+          <div id="example4-h" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+        <figure class="example-container">
+          <figcaption><code>align-content: space-evenly</code></figcaption>
+          <div id="example4-i" class="example-box-container">
+            <div class="example-box">A</div>
+            <div class="example-box">B</div>
+            <div class="example-box">C</div>
+            <div class="example-box">D</div>
+            <div class="example-box">E</div>
+            <div class="example-box">F</div>
+            <div class="example-box">G</div>
+          </div>
+        </figure>
+      </section>
+      <section id="Further_reading" class="main-section">
+        <header><h2>Further reading</h2></header>
+        <p>Further information on flexboxes can be found on <a href="https://developer.mozilla.org/en-US/docs/Glossary/Flexbox" target="_blank" rel="noopenner noreferrer">MDN</a>.
+      </section>
+    </main>
+  </body>
+</head>

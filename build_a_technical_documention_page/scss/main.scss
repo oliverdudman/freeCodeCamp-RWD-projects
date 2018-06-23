@@ -1,0 +1,225 @@
+// sizes
+$navbar-width: 250px;
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+  height: 100%;
+  width: 100%;
+
+  margin: 0px;
+
+  font-family: "Roboto", sans-serif;
+}
+
+// example code output styling
+#example1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#example2-a {
+  justify-content: space-around;
+  height: auto;
+
+}
+
+#example2-b {
+  justify-content: space-around;
+  flex-direction: column;
+  height: 300px;
+  width: auto;
+}
+
+#example3 {
+  &-a {
+    justify-content: center;
+  }
+  &-b {
+    justify-content: flex-start;
+  }
+  &-c {
+    justify-content: flex-end;
+  }
+  &-d {
+    justify-content: space-between;
+  }
+  &-e {
+    justify-content: space-around;
+  }
+  &-f {
+    justify-content: space-evenly;
+  }
+  &-g {
+    align-items: center;
+  }
+  &-h {
+    align-items: flex-start;
+  }
+  &-i {
+    align-items: flex-end;
+  }
+}
+
+#example4 {
+  &-a {
+    flex-wrap: nowrap;
+  }
+  &-b {
+    flex-wrap: wrap;
+  }
+  &-c {
+    flex-wrap: wrap-reverse;
+  }
+  &-d {
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  &-e {
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  &-f {
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+  &-g {
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+  &-h {
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+  &-i {
+    align-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+#main-doc {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+
+  padding: 1.5em;
+  padding-top: 0;
+  padding-left: $navbar-width + 24px;
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  display: flex;
+  flex-direction: column;
+  width: $navbar-width;
+  height: 100%;
+  border-right: 2px solid black;
+  box-sizing: border-box;
+
+  h1 {
+    padding: 0 1em;
+  }
+
+  &-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+    margin: 0.5em 1em;
+
+    font-size: 2em;
+  }
+
+  &.active {
+    max-height: 100%;
+  }
+}
+
+.code-block {
+  background-color: #d9d9d9;
+}
+
+.example-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border: 1px solid grey;
+
+  background-color: orange;
+}
+
+.example-box-container {
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.example-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2em;
+
+  text-align: center;
+}
+
+.nav-link {
+  padding: 0.5em 1em;
+  border-top: 1px solid black;
+
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  #navbar {
+    position: fixed;
+    z-index: 1;
+
+    height: auto;
+    max-height: 4em;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+
+    background-color: white;
+
+    &-toggler {
+      display: block;
+
+      cursor: pointer;
+    }
+  }
+
+  #main-doc {
+    padding: 1.5em;
+    padding-top: 5em;
+
+    section {
+      padding-top: 5em;
+      margin-top: -5em;
+    }
+  }
+}
