@@ -53,8 +53,9 @@ html, body {
     font-size: 1.1em; }
     .form-group__input__check {
       display: block; }
-    .form-group__input--dropdown {
-      margin-top: 0.2em; }
+    .form-group__input__dropdown {
+      width: 50%;
+      margin-top: 0.5em; }
     .form-group__input--comment {
       min-height: 7em; }
     .form-group__input--multi {
