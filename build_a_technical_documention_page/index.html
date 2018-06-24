@@ -47,25 +47,25 @@
           flex-direction to either row or column (row is default):
         </p>
         <pre class="code-block"><code>
-          .parent {
-            display: flex;
-            flex-direction: row;
-          }
+<!--     -->.parent {
+<!--     -->  display: flex;
+<!--     -->  flex-direction: row;
+<!--     -->}
         </code></pre>
         <p>
           To center an element vertically and horizontally, set both the justify-content and align-items properties to center.
           In order to take effect, the width and height also need to be set.
         </p>
         <pre class="code-block"><code>
-          .parent {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
+<!--     -->.parent {
+<!--     -->  display: flex;
+<!--     -->  justify-content: center;
+<!--     -->  align-items: center;
+<!--     -->  flex-direction: row;
 
-            width: 300px;
-            height: 300px;
-          }
+<!--     -->  width: 300px;
+<!--     -->  height: 300px;
+<!--     -->}
         </code></pre>
         <div class="example-container">
           <div id="example1">
@@ -110,25 +110,24 @@
             <li>space-evenly</li>
           </ul>
           <pre class="code-block"><code>
-            &ltstyle&gt
-              .parent {
-                display: flex;
-                // set alignment
-                justify-content: ;
-                flex-direction: row;
+<!--     -->&ltstyle&gt
+<!--     -->  .parent {
+<!--     -->    display: flex;
+<!--     -->    // set alignment
+<!--     -->    justify-content: ;
+<!--     -->    flex-direction: row;
 
-                width: 100%;
-                height: 100%;
-              }
-            &lt/style&gt
-
-            &ltbody&gt
-              &ltdiv class="parent"&gt
-                &ltdiv class="box"&gt&lt/div&gt
-                &ltdiv class="box"&gt&lt/div&gt
-                &ltdiv class="box"&gt&lt/div&gt
-              &lt/div&gt
-            &lt/body&gt
+<!--     -->    width: 100%;
+<!--     -->    height: 100%;
+<!--     -->  }
+<!--     -->&lt/style&gt
+<!--     -->&ltbody&gt
+<!--     -->  &ltdiv class="parent"&gt
+<!--     -->    &ltdiv class="box"&gt&lt/div&gt
+<!--     -->    &ltdiv class="box"&gt&lt/div&gt
+<!--     -->    &ltdiv class="box"&gt&lt/div&gt
+<!--     -->  &lt/div&gt
+<!--     -->&lt/body&gt
           </code></pre>
           <figure class="example-container">
             <figcaption><code>justify-content: center</code></figcaption>
@@ -182,25 +181,23 @@
             set to row, the align-items property will align the content on the vertical axis.
           </p>
           <pre class="code-block"><code>
-            &ltstyle&gt
-              .parent {
-                display: flex;
-                // set alignment
-                align-items: ;
-                flex-direction: row;
-
-                width: 100%;
-                height: 100%;
-              }
-            &lt/style&gt
-
-            &ltbody&gt
-              &ltdiv class="parent"&gt
-                &ltdiv class="box"&gt&lt/div&gt
-                &ltdiv class="box"&gt&lt/div&gt
-                &ltdiv class="box"&gt&lt/div&gt
-              &lt/div&gt
-            &lt/body&gt
+<!--     -->&ltstyle&gt
+<!--     -->  .parent {
+<!--     -->    display: flex;
+<!--     -->    // set alignment
+<!--     -->    align-items: ;
+<!--     -->    flex-direction: row;<!--     -->
+<!--     -->    width: 100%;
+<!--     -->    height: 100%;
+<!--     -->  }
+<!--     -->&lt/style&gt<!--     -->
+<!--     -->&ltbody&gt
+<!--     -->  &ltdiv class="parent"&gt
+<!--     -->    &ltdiv class="box"&gt&lt/div&gt
+<!--     -->    &ltdiv class="box"&gt&lt/div&gt
+<!--     -->    &ltdiv class="box"&gt&lt/div&gt
+<!--     -->  &lt/div&gt
+<!--     -->&lt/body&gt
           </code></pre>
           <figure class="example-container">
             <figcaption><code>align-items: center</code></figcaption>
@@ -238,30 +235,32 @@
           <li>wrap</li>
           <li>wrap-reverse</li>
         </ul>
-        <pre class="code-block"><code>
-          &ltstyle&gt
-            .parent {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: ;// wrap option
+        <pre class="code-block">
+          <code>
+<!--     -->&ltstyle&gt
+<!--     -->.parent {
+<!--     -->  display: flex;
+<!--     -->  flex-direction: row;
+<!--     -->  flex-wrap: ;// wrap option
 
-              width: 100%;
-              height: 100%;
-            }
-          &lt/style&gt
+<!--     -->  width: 100%;
+<!--     -->  height: 100%;
+<!--     -->}
+<!--     -->&lt/style&gt
 
-          &ltbody&gt
-            &ltdiv class="parent"&gt
-              &ltdiv class="box"&gtA&lt/div&gt
-              &ltdiv class="box"&gtB&lt/div&gt
-              &ltdiv class="box"&gtC&lt/div&gt
-              &ltdiv class="box"&gtD&lt/div&gt
-              &ltdiv class="box"&gtE&lt/div&gt
-              &ltdiv class="box"&gtF&lt/div&gt
-              &ltdiv class="box"&gtG&lt/div&gt
-            &lt/div&gt
-          &lt/body&gt
-        </code></pre>
+<!--     -->&ltbody&gt
+<!--     -->  &ltdiv class="parent"&gt
+<!--     -->    &ltdiv class="box"&gtA&lt/div&gt
+<!--     -->    &ltdiv class="box"&gtB&lt/div&gt
+<!--     -->    &ltdiv class="box"&gtC&lt/div&gt
+<!--     -->    &ltdiv class="box"&gtD&lt/div&gt
+<!--     -->    &ltdiv class="box"&gtE&lt/div&gt
+<!--     -->    &ltdiv class="box"&gtF&lt/div&gt
+<!--     -->    &ltdiv class="box"&gtG&lt/div&gt
+<!--     -->  &lt/div&gt
+<!--     -->&lt/body&gt
+        </code>
+      </pre>
         <figure class="example-container">
           <figcaption><code>flex-wrap: nowrap</code></figcaption>
           <div id="example4-a" class="example-box-container">
@@ -304,30 +303,29 @@
           work on the vertical axis.
         </p>
         <pre class="code-block"><code>
-          &ltstyle&gt
-            .parent {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              // set alignment
-              align-content: ;
+<!--     -->&ltstyle&gt
+<!--     -->  .parent {
+<!--     -->    display: flex;
+<!--     -->    flex-direction: row;
+<!--     -->    flex-wrap: wrap;
+<!--     -->    // set alignment
+<!--     -->    align-content: ;
+<!--     -->    width: 100%;
+<!--     -->    height: 100%;
+<!--     -->  }
+<!--     -->&lt/style&gt
 
-              width: 100%;
-              height: 100%;
-            }
-          &lt/style&gt
-
-          &ltbody&gt
-            &ltdiv class="parent"&gt
-              &ltdiv class="box"&gtA&lt/div&gt
-              &ltdiv class="box"&gtB&lt/div&gt
-              &ltdiv class="box"&gtC&lt/div&gt
-              &ltdiv class="box"&gtD&lt/div&gt
-              &ltdiv class="box"&gtE&lt/div&gt
-              &ltdiv class="box"&gtF&lt/div&gt
-              &ltdiv class="box"&gtG&lt/div&gt
-            &lt/div&gt
-          &lt/body&gt
+<!--     -->&ltbody&gt
+  <!--     -->&ltdiv class="parent"&gt
+  <!--     -->  &ltdiv class="box"&gtA&lt/div&gt
+  <!--     -->  &ltdiv class="box"&gtB&lt/div&gt
+  <!--     -->  &ltdiv class="box"&gtC&lt/div&gt
+  <!--     -->  &ltdiv class="box"&gtD&lt/div&gt
+  <!--     -->  &ltdiv class="box"&gtE&lt/div&gt
+  <!--     -->  &ltdiv class="box"&gtF&lt/div&gt
+  <!--     -->  &ltdiv class="box"&gtG&lt/div&gt
+  <!--     -->&lt/div&gt
+<!--     -->&lt/body&gt
         </code></pre>
         <figure class="example-container">
           <figcaption><code>align-content: center</code></figcaption>
