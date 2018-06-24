@@ -138,7 +138,7 @@ html, body {
     right: 0;
 
     display: none;
-    margin: 0.5em 1em;
+    margin: 0.5em;
 
     font-size: 2em;
   }
@@ -166,7 +166,6 @@ html, body {
 
 .example-box-container {
   display: flex;
-  align-self: center;
   justify-content: flex-start;
 
   width: 300px;
