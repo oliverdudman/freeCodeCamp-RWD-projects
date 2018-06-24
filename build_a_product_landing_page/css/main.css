@@ -42,7 +42,7 @@ h3 {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  padding: 20px;
+  padding: 2.5em 0;
   box-sizing: border-box;
   background-color: #639673; }
 
@@ -93,7 +93,7 @@ h3 {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  padding: 20px;
+  padding: 2.5em 0;
   box-sizing: border-box;
   background-color: #97C1BC; }
 
@@ -147,6 +147,8 @@ h3 {
   overflow: hidden;
   background-color: #DAB06F;
   font-family: "Open Sans", sans-serif; }
+  .product-card ul {
+    padding-right: 1em; }
   .product-card__btn {
     display: block;
     margin: 10px auto;
