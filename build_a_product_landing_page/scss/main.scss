@@ -47,7 +47,7 @@ h3 {
 #footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   margin: 0;
   padding: 10px 10px;
@@ -57,6 +57,23 @@ h3 {
   color: white;
 
   font-family: $font-decorative;
+
+  #form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      margin: 0;
+
+      color: black;
+      text-align: center;
+    }
+
+    input {
+      margin: 5px;
+    }
+  }
 }
 
 #gallery {
@@ -252,6 +269,7 @@ h3 {
 
 @media screen and (max-width: 750px) {
   #footer {
+    align-items: center;
     flex-direction: column;
   }
 

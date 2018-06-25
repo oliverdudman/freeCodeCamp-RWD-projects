@@ -28,7 +28,7 @@ h3 {
 #footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   margin: 0;
   padding: 10px 10px;
@@ -36,6 +36,16 @@ h3 {
   background-color: #577C74;
   color: white;
   font-family: "Amatic SC", cursive; }
+  #footer #form {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    #footer #form h2 {
+      margin: 0;
+      color: black;
+      text-align: center; }
+    #footer #form input {
+      margin: 5px; }
 
 #gallery {
   display: flex;
@@ -173,6 +183,7 @@ h3 {
     flex-wrap: nowrap; } }
 @media screen and (max-width: 750px) {
   #footer {
+    align-items: center;
     flex-direction: column; }
 
   #header {
