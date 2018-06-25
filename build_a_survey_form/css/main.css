@@ -26,7 +26,7 @@ html, body {
   margin: auto;
   padding: 1em;
   border-radius: 10px;
-  background-color: #80ff80; }
+  background-color: #9aff9a; }
 
 .about {
   display: flex;
@@ -44,7 +44,7 @@ html, body {
   padding: 1em;
   border-radius: 10px;
   box-sizing: border-box;
-  background-color: #4dff4d; }
+  background-color: #67ff67; }
   .form-group__input {
     display: inline-block;
     width: 50%;

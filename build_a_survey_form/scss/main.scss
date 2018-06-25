@@ -39,7 +39,7 @@ html, body {
   padding: 1em;
   border-radius: 10px;
 
-  background-color: darken($main-color, 10);
+  background-color: darken($main-color, 5);
 }
 
 .about {
@@ -61,7 +61,7 @@ html, body {
   border-radius: 10px;
   box-sizing: border-box;
 
-  background-color: darken($main-color, 20);
+  background-color: darken($main-color, 15);
 
   &__input {
     display: inline-block;
